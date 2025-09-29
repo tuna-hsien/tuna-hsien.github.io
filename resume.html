@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>履歷範本 — 姓名</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+--bg:#f7fafc;
+--card:#ffffff;
+--muted:#6b7280;
+--accent:#0ea5a4; /* teal */
+--accent-dark:#0b8b88;
+--max-width:900px;
+--radius:12px;
+color-scheme: light;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Noto Sans",Helvetica,Arial,sans-serif;background:var(--bg);margin:24px;display:flex;justify-content:center}
+.resume{width:100%;max-width:var(--max-width);background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.9));border-radius:var(--radius);box-shadow:0 10px 30px rgba(2,6,23,0.08);overflow:hidden}
+.header{display:flex;gap:20px;padding:28px;background:var(--card);align-items:center}
+.avatar{width:96px;height:96px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:28px}
+.name-block{flex:1}
+h1{margin:0;font-size:22px}
+.title{color:var(--muted);margin-top:6px}
+.contact{display:flex;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:14px;margin-top:10px}
+
+
+.container{display:grid;grid-template-columns:1fr 320px;gap:24px;padding:28px}
+.section{background:transparent;padding:12px 0}
+.card{background:var(--card);padding:16px;border-radius:10px}
+h2{margin:0 0 10px 0;font-size:16px}
+p.lead{margin:0;color:var(--muted);line-height:1.5}
+
+
+/* Experience / Education list */
+.item{padding:12px 0;border-bottom:1px dashed #e6e9ef}
+.item:last-child{border-bottom:0}
+.item .meta{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.item .role{font-weight:600}
+.item .company{color:var(--muted)}
+.item .time{font-size:13px;color:var(--muted)}
+ul.bullets{margin:8px 0 0 18px}
+
+
+/* Skills */
+.skills{display:flex;flex-wrap:wrap;gap:8px}
+.skill{padding:6px 10px;border-radius:999px;background:#f1f5f9;font-size:13px}
+
+
+/* Print friendly */
+@media print{
+body{margin:0;background:white}
+.resume{box-shadow:none;border-radius:0}
+a::after{content:""}
+}
+
+
+/* Responsive */
+@media (max-width:880px){
+.container{grid-template-columns:1fr;padding:18px}
+.header{flex-direction:row}
+}
+</style>
+</head>
+<body>
+<article class="resume" aria-label="履歷">
+<header class="header">
+<div class="avatar" aria-hidden="true">姓名
+<!-- 可改成 <img src="photo.jpg" alt="照片"> -->
+</div>
+<div class="name-block">
+<h1>王小明</h1>
+<div class="title">軟體工程師 / 前端工程師</div>
+<div class="contact">
+<div>📍 台北, 台灣</div>
+<div>✉️ email@example.com</div>
+<div>🔗 linkedin.com/in/yourname</div>
+<div>💼 github.com/yourname</div>
+</div>
